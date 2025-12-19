@@ -1,6 +1,5 @@
 # librerías
 
-import pandas as pd
 import psycopg2
 
 # conexión a la base de datos
