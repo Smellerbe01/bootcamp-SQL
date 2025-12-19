@@ -1,0 +1,189 @@
+FASE 1 – Python sólido aplicado a bases de datos
+
+Objetivo de la fase:
+Que Python sea tu herramienta de trabajo para consultar, procesar y automatizar datos desde PostgreSQL, no solo “código que corre”.
+
+No vamos a mezclar todavía web, Pandas ni dashboards.
+Primero control total de la conexión, consultas y resultados.
+
+MÓDULO 1 – Python como herramienta de automatización (SQL + PostgreSQL)
+Qué vas a aprender en este módulo
+
+Conectarte correctamente a PostgreSQL desde Python
+
+Ejecutar múltiples consultas de forma segura
+
+Procesar resultados (no solo imprimirlos)
+
+Exportar resultados a archivos
+
+Estructurar un script limpio y reutilizable
+
+Estructura del trabajo (importante)
+
+Vamos a trabajar con un solo archivo Python, sin emojis, sin magia, sin librerías innecesarias.
+
+Archivo:
+
+postgres_automation.py
+
+EJERCICIO 1 – Conexión y verificación (fundamental)
+Objetivo
+
+Confirmar que:
+
+La conexión es estable
+
+La base Pagila responde
+
+Sabemos exactamente qué base y esquema estamos usando
+
+Lo que debes hacer (lógica, no código aún)
+
+Crear una función que:
+
+Se conecte a PostgreSQL
+
+Devuelva la conexión
+
+Ejecutar una consulta de verificación:
+
+Nombre de la base de datos
+
+Usuario conectado
+
+Versión de PostgreSQL
+
+Resultado esperado:
+
+Texto claro en consola confirmando conexión
+
+Si falla, error controlado (no crash)
+
+EJERCICIO 2 – Listar tablas del esquema public
+Objetivo
+
+Dejar de “adivinar” qué tablas existen.
+
+Lógica que debes aplicar
+
+Consultar el catálogo del sistema
+
+Obtener solo:
+
+Nombre de tabla
+
+Filtrar:
+
+Esquema public
+
+Resultado esperado:
+
+Lista clara de tablas
+
+Conteo total de tablas
+
+EJERCICIO 3 – Conteo de registros por tabla (automatizado)
+Aquí empieza lo importante
+Objetivo
+
+Evitar escribir 29 veces SELECT COUNT(*).
+
+Lógica
+
+Reutilizar el listado de tablas
+
+Usar un bucle en Python
+
+Para cada tabla:
+
+Ejecutar SELECT COUNT(*)
+
+Mostrar el resultado
+
+Resultado esperado:
+
+film: 1000 registros
+actor: 200 registros
+payment: 16049 registros
+...
+
+EJERCICIO 4 – Mostrar 5 registros por tabla
+Objetivo
+
+Validar estructura y datos sin abrir pgAdmin.
+
+Lógica
+
+Reutilizar la lista de tablas
+
+Para cada tabla:
+
+Ejecutar SELECT * FROM tabla LIMIT 5
+
+Mostrar:
+
+Nombre de tabla
+
+Filas obtenidas
+
+No se evalúa estética, se evalúa control y lógica.
+
+EJERCICIO 5 – Exportar resultados a archivos
+Objetivo
+
+Que Python haga trabajo real.
+
+Lógica
+
+Elegir 2 tablas (ejemplo: film, customer)
+
+Exportar los resultados a:
+
+CSV
+
+Confirmar:
+
+Archivo creado
+
+Número de filas exportadas
+
+Reglas de la fase (muy importante)
+
+Nada de emojis en código
+
+Nada de copiar/pegar sin entender
+
+Cada función debe tener un propósito claro
+
+Si algo falla, se analiza, no se borra
+
+Cómo vamos a trabajar tú y yo
+
+Tú implementas EJERCICIO 1
+
+Me muestras:
+
+Código
+
+Salida de consola
+
+Yo:
+
+Corrijo
+
+Optimizo
+
+Te explico si hay un error conceptual
+
+No avanzamos hasta que esté sólido.
+
+Tu siguiente paso
+
+Empieza con EJERCICIO 1:
+
+Conexión
+
+Consulta de verificación
+
+Cuando lo tengas, mándame el código y la salida.
