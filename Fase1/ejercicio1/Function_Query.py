@@ -1,5 +1,5 @@
 # librerías
-import connect_Db as connect_Db
+import connect_Db 
 from connect_Db import connect_db
 import pandas as pd
 

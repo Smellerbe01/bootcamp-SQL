@@ -15,7 +15,7 @@ def connect_db( ):
             password="123456789",   
             port="5432"
         )
-        print("Conexión exitosa")
+        print("connection successful")
         return conn # retorna la conexión
     except Exception as e: # manejo de errores
         print("Error de conexión", e)
